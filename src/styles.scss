@@ -1,1 +1,339 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1320px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+.navbar-brand {
+  margin-right: 25px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.main {
+  padding: 72px 0 36px 0;
+}
+
+.slider-text {
+  position: absolute;
+  padding-top: 0;
+  left: 10%;
+  top: 30%;
+  color: black;
+  text-align: left;
+}
+
+.image-group {
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+}
+
+.slider-text-nobtn h2 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 615px;
+  margin-bottom: 70px;
+}
+
+.slider-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 615px;
+  margin-bottom: 70px;
+}
+
+.slider-text p {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.slick-next,
+.slick-prev {
+  position: absolute;
+  padding-top: 4px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #0a53be;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  top: 50%;
+}
+
+.slick-next {
+  right: 2%;
+  z-index: 5;
+}
+
+//.slick-next::before {
+//  content: url("../images/next.svg");
+//  width: 12%;
+//}
+//
+//.slick-prev {
+//  left: 2%;
+//  z-index: 5;
+//}
+//
+//.slick-prev::before {
+//  content: url("../images/prev.svg");
+//}
+
+.first-btn {
+  font-size: 16px;
+  width: 175px;
+}
+
+.collection {
+  padding: 36px 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.card {
+  max-width: 416px;
+}
+
+.question {
+  padding: 36px 0;
+}
+
+.accordion {
+  margin: 0 auto;
+  max-width: 60%;
+  --bs-accordion-btn-icon-transition: transform 0.4s ease-in-out;
+  --bs-accordion-transition: none;
+}
+
+.accordion .ui-accordion-header {
+  padding: 10px 35px 10px 10px;
+  background: #ffd6f0;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  border-radius: 10px;
+}
+
+.accordion .ui-accordion-content {
+  padding: 10px;
+  border: none;
+}
+
+.ui-accordion .ui-accordion-header {
+  border: 5px solid #007fff;
+  background: #007fff;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.form {
+  padding: 36px 0 48px 0;
+}
+
+.form .container {
+  max-width: 636px;
+}
+
+.form .btn {
+  width: 156px;
+  margin-top: 20px;
+}
+
+.footer {
+  padding: 19px 0;
+  background: rgb(248, 249, 250);
+}
+
+.rights {
+  color: rgba(0, 0, 0, 0.60);
+  padding-left: 15px;
+}
+
+.order-text {
+  display: none;
+}
+
+.accordion-item .accordion-button {
+  background-color: #0a53be;
+  color: white;
+}
+
+@media screen and (max-width: 920px) {
+  .slider-text h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .slider-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .slider-text-nobtn h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 674px) {
+  .slider-text h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .slider-text p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .slider-text-nobtn h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .first-btn {
+    font-size: 14px;
+  }
+
+  .slick-next,
+  .slick-prev {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .slider-text {
+    top: 25%;
+  }
+
+  .slider-text-nobtn {
+    top: 25%;
+  }
+
+  .first-btn {
+    width: 130px;
+  }
+
+  .slick-prev {
+    left: -8px;
+  }
+
+  .slick-next {
+    right: -8px;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .slider-text {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 351px) {
+  .slider-text h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .slider-text-nobtn h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .slider-text p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .first-btn {
+    font-size: 12px;
+    width: 90px;
+  }
+}
+
+.loader-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+
+.loader::before, .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.loader::after {
+  border-color: #FF3D00;
+  animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+  }
+}

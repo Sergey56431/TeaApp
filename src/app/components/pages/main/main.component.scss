@@ -1,0 +1,18 @@
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  justify-content: center;
+  border-top: none;
+}
+
+.modal {
+  align-items: center;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6)
+}

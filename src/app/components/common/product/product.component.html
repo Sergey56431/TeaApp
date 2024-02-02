@@ -1,0 +1,13 @@
+<div class="col">
+  <div class="card">
+    <a class="product-item" href="{{product.image}}">
+      <img src="{{product.image}}" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.description | maxLengthWord}}</p>
+      <p class="product-price">{{product.price | currency : 'RUB': 'руб.'}}</p>
+      <a class="btn btn-primary" [routerLink]="['/products', product.id]">Подробнее</a>
+    </div>
+  </div>
+</div>

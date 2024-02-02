@@ -1,0 +1,11 @@
+<section class="animate__animated animate__fadeIn collection">
+  <div class="container">
+    <h3 class="title">Наши чайные коллекции</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <product *ngFor="let product of products" [product]="product"></product>
+    </div>
+  </div>
+</section>
+<div *ngIf="loading" class="loader-bg">
+  <span class="loader"></span>
+</div>

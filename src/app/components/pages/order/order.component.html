@@ -1,0 +1,135 @@
+<section class="form">
+  <div class="container">
+    <h3 class="title">Сделать заказ</h3>
+    <form class="row g-2 needs-validation" *ngIf="form === true? form : false" [formGroup]="inputFormControl">
+      <div class="col-md-4">
+        <!--        Поле ввода имя-->
+        <label for="validationCustom01" class="form-label">Имя</label>
+        <input type="text" class="form-control form-order" id="validationCustom01"
+               [class]="{'border-danger' : inputName?.invalid && (inputName?.dirty || inputName?.touched)}"
+               formControlName="name">
+
+        <div *ngIf="inputName?.invalid && (inputName?.dirty || inputName?.touched)">
+          <div class="text-danger" *ngIf="inputName?.errors?.['required']">
+            Введите имя
+          </div>
+          <div class="text-danger" *ngIf="inputName?.errors?.['pattern']">
+            Некорректное имя
+          </div>
+        </div>
+      </div>
+      <!--        Поле ввода Фамилии-->
+      <div class="col-md-4 gx-2">
+        <label for="validationCustom02" class="form-label">Фамилия</label>
+        <input type="text" class="form-control form-order" id="validationCustom02"
+               [class]="{'border-danger' : inputLastName?.invalid && (inputLastName?.dirty || inputLastName?.touched)}"
+               formControlName="lastName">
+
+        <div *ngIf="inputLastName?.invalid && (inputLastName?.dirty || inputLastName?.touched)">
+          <div class="text-danger" *ngIf="inputLastName?.errors?.['required']">
+            Введите фамилию
+          </div>
+          <div class="text-danger" *ngIf="inputLastName?.errors?.['pattern']">
+            Некорректная фамилия
+          </div>
+        </div>
+      </div>
+      <!--        Поле ввода Телефона -->
+      <div class="col-md-4 ">
+        <label for="validationCustomPhone" class="form-label">Телефон</label>
+        <div class="input-group">
+          <input type="text" class="form-control form-order" id="validationCustomPhone"
+                 [class]="{'border-danger' : inputPhone?.invalid && (inputPhone?.dirty || inputPhone?.touched)}"
+                 aria-describedby="inputGroupPrepend" formControlName="phone">
+        </div>
+
+        <div *ngIf="inputPhone?.invalid && (inputPhone?.dirty || inputPhone?.touched)">
+          <div class="text-danger" *ngIf="inputPhone?.errors?.['required']">
+            Введите телефон
+          </div>
+          <div class="text-danger" *ngIf="inputPhone?.errors?.['pattern']">
+            Только цифры
+          </div>
+        </div>
+      </div>
+      <!--        Поле ввода Индекса -->
+      <div class="row g-2">
+        <div class="col-md-6 second-row">
+          <label for="validationCustom03" class="form-label">Индекс</label>
+          <input type="text" class="form-control form-order" id="validationCustom03"
+                 [class]="{'border-danger' : inputZip?.invalid && (inputZip?.dirty || inputZip?.touched)}"
+                 formControlName="zip">
+
+          <div *ngIf="inputZip?.invalid && (inputZip?.dirty || inputZip?.touched)">
+            <div class="text-danger" *ngIf="inputZip?.errors?.['required']">
+              Введите индекс
+            </div>
+            <div class="text-danger" *ngIf="inputZip?.errors?.['pattern']">
+              Только 6 цифр
+            </div>
+          </div>
+        </div>
+        <!--        Поле ввода Страны -->
+        <div class="col-md-6 second-row">
+          <label for="validationCustom07" class="form-label">Страна</label>
+          <input type="text" class="form-control form-order" id="validationCustom07"
+                 [class]="{'border-danger' : inputCountry?.invalid && (inputCountry?.dirty || inputCountry?.touched)}"
+                 formControlName="country">
+
+          <div *ngIf="inputCountry?.invalid && (inputCountry?.dirty || inputCountry?.touched)">
+            <div class="text-danger" *ngIf="inputCountry?.errors?.['required']">
+              Введите индекс
+            </div>
+            <div class="text-danger" *ngIf="inputCountry?.errors?.['pattern']">
+              Только 6 цифр
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--        Поле ввода Адреса -->
+      <div class="row g-2">
+        <div class="col-md-6">
+          <label for="validationCustom05" class="form-label">Адрес</label>
+          <input type="text" class="form-control form-order" id="validationCustom05"
+                 [class]="{'border-danger' : inputAddress?.invalid && (inputAddress?.dirty || inputAddress?.touched)}"
+                 formControlName="address">
+
+          <div *ngIf="inputAddress?.invalid && (inputAddress?.dirty || inputAddress?.touched)">
+            <div class="text-danger" *ngIf="inputAddress?.errors?.['required']">
+              Введите индекс
+            </div>
+            <div class="text-danger" *ngIf="inputAddress?.errors?.['pattern']">
+              Только 6 цифр
+            </div>
+          </div>
+        </div>
+        <!--        Поле ввода Товара -->
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Товар</label>
+          <input class="form-control form-order" id="validationCustom04" formControlName="product">
+        </div>
+      </div>
+      <!--        Поле ввода Комментария -->
+      <div class="row g-2 col-md-12">
+        <label for="validationCustom06" class="form-label">Комментарий</label>
+        <input class="form-control form-order" id="validationCustom06">
+      </div>
+      <div class="col-12">
+        <button id="submit" class="btn btn-primary hvr-box-shadow-inset" (click)="createOrder()">Отправить</button>
+      </div>
+    </form>
+    <div class="successOrder" id="successOrder" *ngIf="successOrder === false? successOrder : true">
+      Спасибо за заказ!
+      <button [routerLink]="'/'">OK</button>
+    </div>
+    <div class="notSuccessful"  *ngIf="notSuccessful === false? notSuccessful : true">
+      <div>Произошла ошибка. <br>
+        Попробуйте еще раз.</div>
+    </div>
+  </div>
+  <div id="success-msg" class="order-text">
+    <div class="container">
+      <h4>Спасибо за заказ. Мы свяжемся с вами в ближайшее время!</h4>
+    </div>
+  </div>
+</section>
