@@ -56,7 +56,7 @@ export class OrderComponent implements OnInit, OnDestroy {
   }
 
   createOrder() {
-    
+
     this.productService.createOrder({
       name: this.inputFormControl.value.name,
       last_name: this.inputFormControl.value.lastName,
@@ -75,6 +75,9 @@ export class OrderComponent implements OnInit, OnDestroy {
           console.log(response)
         } else {
           this.notSuccessful = true;
+          setTimeout(() => {
+            this.notSuccessful = false;
+          }, 3000)
           console.log(response)
           console.log(this.productName)
         }
