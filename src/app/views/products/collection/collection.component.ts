@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {ProductServiceService} from "../../../services/product-service.service";
 import {CollectionType} from "../../../types/collection.type";
+import {ProductServiceService} from "../../../shared/services/product-service.service";
 
 @Component({
   selector: 'app-collection',

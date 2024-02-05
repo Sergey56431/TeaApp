@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MainComponent} from "./components/pages/main/main.component";
-import {CollectionComponent} from "./components/pages/collection/collection.component";
-import {OrderComponent} from "./components/pages/order/order.component";
-import {ProductPageComponent} from "./components/pages/product-page/product-page.component";
+
 
 const routes: Routes = [
-  {path: '' , component: MainComponent},
-  {path: 'products' , component: CollectionComponent},
-  {path: 'products/:id' , component: ProductPageComponent},
-  {path: 'order' , component: OrderComponent}
+  {
+    path: '',
+    children: [
+      {path: '', loadChildren: () => import('./views/main/main.module').then(m => m.MainModule)},
+      {path: 'order', loadChildren: () => import('./views/order/order.module').then(m => m.OrderModule)},
+      {path: 'products', loadChildren: () => import('./views/products/products.module').then(m => m.ProductsModule)},
+    ]
+  },
 ];
 
 @NgModule({

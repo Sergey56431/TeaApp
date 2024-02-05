@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {ProductServiceService} from "../../../services/product-service.service";
 import {CollectionType} from "../../../types/collection.type";
+import {ProductServiceService} from "../../../shared/services/product-service.service";
 
 @Component({
   selector: 'app-product-page',

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {CollectionType} from "../types/collection.type";
+import {CollectionType} from "../../types/collection.type";
 
 @Injectable({
   providedIn: 'root'
